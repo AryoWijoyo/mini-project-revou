@@ -56,6 +56,7 @@ main{
 }
 .card-title{
     text-align: center;
+    color: white;
     padding: 8px;
     background-color: blue;
     border-radius: 4px;
@@ -103,7 +104,8 @@ main{
 
 /* Button Submit */
 .tombol{
-    padding: 6px 8px;
+    padding: 20px 14px;
+    color: white;
     background-color: blue;
     border: none;
     border-radius: 6px;
@@ -130,10 +132,11 @@ footer{
     justify-content: end;
 }
 .btn-reset{
-    padding: 6px 8px;
+    padding: 18px 14px;
     background-color: blue;
+    color: white;
     border: none;
     border-radius: 6px;
-    cursor: pointer;background-color: yellow;
+    cursor: pointer;background-color: orange;
     
 }
