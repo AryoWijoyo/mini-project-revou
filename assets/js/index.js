@@ -12,7 +12,7 @@ function luassegitiga() {
 }
 
 function luasReset() {
- document.getElementById("resetSegitiga").reset();
+ document.getElementById("resetfromsegitiga").reset();
 }
 
 function kelilingsegitiga() {
@@ -31,5 +31,5 @@ function kelilingsegitiga() {
 }
 
 function kelilingReset() {
- document.getElementById("resetKeliling").reset();
+ document.getElementById("resetfromKeliling").reset();
 }
