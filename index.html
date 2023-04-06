@@ -1,145 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Kalkulator Online</title>
- <link rel="stylesheet" href="assets/index.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Katik Mini Project Revo U</title>
+   <link rel="stylesheet" href="assets/css/index.css">
 </head>
+
 <body>
-   <!-- Title -->
-   <h1 class="subtitle">Welcome to Katik</h1>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus corrupti sit placeat dicta optio earum adipisci. Adipisci corrupti ea odit, ipsa, eius reprehenderit delectus pariatur dicta sed vel assumenda repellat?</p>
-   <!-- Header / Navbar -->
+   <div class="title">
+      <h1 class="h1-title">Welcome to Katik</h1>
+      <p>Hallo Teman - Teman Semuanya</p>
+      <p>Selamat Datang Di Website Menghitung Luas Dan Keliling Segitiga</p>
+   </div>
    <header>
       <nav>
-         <div class="menu">
-            <a href="#triangle" class="menu-triangle">Segitiga</a>
-            <a href="#jajargenjang" class="">Jajargenjang</a>
-         </div>
+         <ul class="navbar">
+            <a class="luas" href="#luas">Luas Segitiga</a>
+            <a href="#keliling">Keliling segitiga</a>
+         </ul>
       </nav>
    </header>
-   <!-- Main Page -->
+
    <main>
-      <section id="triangle">
-         <div class="card">
-            <div>
-               <h2 class="luas-segitiga">Luas Segitiga</h2>
-            </div>
-            <img class="logo-segitiga" src="assets/img/segitiga.jpg" alt="">
-         <div>
-            <h3>Rumus Luas Segitiga Yaitu:</h3>
-            <br>
-            <p class="title-segitiga">L = 1/2 x T x A</p>
-            <br>
-         </div>
-         <div>
-            <p>Dimana</p>
-            <p>L=Luas</p>
-            <p>A=Panjang Alas</p>
-            <p>T=Tinggi</p>
-            <br>
-            <hr>
-            <br>
-         <div class="form-hitung">
-            <h1 class="hitung-segitiga">Hitung Luas Segitiga</h1>
-            <form action="" class="form-triangle">
-               <input type="number" name="alas-triangle" />
-               <input type="number" name="high-triangle" />
-            <p>L=1/2 x A x T</p>
-            <p>L=1/2 x 90 x 90</p>
-            <p>L=4050</p>
-               <button type="submit"
-               class="button-triangle"
-               onclick="return CalculateTriangle()">Hitung</button>
-            </form>
-         </div>
-      </div>
-            <div class="btn">
-               <button type="reset" class="button-reset">Reset</button>
-            </div>
-   </div>
-
-         </div>
-      </section>
-
-            <section id="triangle">
+            <section id="luas">
                <div class="card">
-                  <div>
-                     <h2 class="luas-segitiga">Keliling Segitiga</h2>
+                  <div class="card-title">
+                     <h2>Luas Segitiga</h2>
                   </div>
-                  <img class="logo-segitiga" src="assets/img/segitiga.jpg" alt="">
-                  <div>
-                     <h3>Keliling Luas Segitiga Yaitu:</h3>
-                     <br>
-                     <p class="title-segitiga">K = S1 + S2 + S3</p>
-                     <br>
+                  <img class="img" src="assets/img/segitiga.png" alt="luas segitiga">
+                  <div class="rumus">
+                     <h3>Rumus luas segitiga yaitu:</h3>
+                     <p>L = 1/2 x T x A</p>
                   </div>
-                  <div>
+                  <div class="keterangan">
                      <p>Dimana</p>
-                     <p>K=Luas</p>
-                     <p>S1=Sisi A</p>
-                     <p>S2=Sisi B</p>
-                     <p>S3=Sisi C</p>
-                     <br>
-                     <hr>
-                     <br>
-                     <div class="form-hitung">
-                        <h1 class="hitung-segitiga">Hitung Luas Segitiga</h1>
-                        <form action="" class="form-triangle">
-                           <input type="number" name="alas-triangle" />
-                           <input type="number" name="high-triangle" />
-                           <p>L=1/2 x A x T</p>
-                           <p>L=1/2 x 90 x 90</p>
-                           <p>L=4050</p>
-                           <button type="submit" class="button-triangle" onclick="return CalculateTriangle()">Hitung</button>
-                        </form>
-                     </div>
+                     <p>T = Tinggi</p>
+                     <p>A = Alas</p>
+                     <p>L = Luas</p>
                   </div>
-                  <div class="btn">
-                     <button type="reset" class="button-reset">Reset</button>
+                  <div class="form">
+                     <h2>Hitung Luas Segitiga</h2>
+                     <form class="form-hitung" action="" id="resetfromsegitiga">
+                        <input type="text" id="alas" name="alas" required>
+                        <input type="text" id="tinggi" name="tinggi" required>
+                        <button class="tombol" type="submit" onclick="return luassegitiga()">Hitung</button>
+                        <p>L = <span id="hasil"></span></p>
+                     </form>
                   </div>
-               </div>
-            
-               </div>
-            </section>
+                  <div class="reset">
+                     <button class="btn-reset" onclick="luasReset()" value="Reset">Reset</button>
+                            </div>
+                        </div>
+                    </section>
 
-      <section id="jajargenjang">
+      <section id="keliling">
          <div class="card">
-         <div>
-            <h2 class="luas-jajargenjang">Luas Jajargenjang</h2>
-         </div>
-         <img src="" alt="">
-         <div>
-            <h3>Rumus Luas</h3>
-            <p>L = 1/2 x T x A</p>
-         </div>
-         <div>
-            <p>Dimana</p>
-            <p>L=.....</p>
-            <p>L=.....</p>
-            <p>L=.....</p>
-            <br>
-            <hr>
-            <br>
-            <div class="form-hitung">
-               <h1 class="hitung-jajargenjang">Hitung Luas Jajargenjang</h1>
-               <form action="" class="form-triangle">
-                  <input type="number" />
-                  <input type="number" />
-                  <button type="submit" class="button-triangle">Hitung</button>
+            <div class="card-title">
+               <h2>Keliling Segitiga</h2>
+            </div>
+            <img class="img" src="assets/img/segitiga.png" alt="rumus keliling segitiga">
+            <div class="rumus">
+               <h3>Rumus Keliling segitiga yaitu:</h3>
+               <p>K = S1 + S2 + S3</p>
+            </div>
+            <div class="keterangan">
+               <p>Dimana</p>
+               <p>K = Keliling</p>
+               <p>S1 = Sisi A</p>
+               <p>S2 = Sisi B</p>
+               <p>S2 = Sisi C</p>
+            </div>
+            <!-- form -->
+            <div class="form">
+               <h2>Hitung Keliling Segitiga</h2>
+               <form class="form-hitung" id="resetKeliling">
+                  <input type="number" id="s1" name="s1" required>
+                  <input type="number" id="s2" name="s2" required>
+                  <input type="number" id="s3" name="s2" required>
+                  <button class="tombol" type="submit" onclick="return kelilingsegitiga()">Hitung</button>
+                  <p>K = <span id="hasilnya"></span></p>
+
                </form>
             </div>
-            <div class="btn">
-               <button type="reset" class="button-reset">Reset</button>
+            <div class="reset">
+               <button class="btn-reset" onclick="kelilingReset()" value="Reset">Reset</button>
             </div>
          </div>
       </section>
-      <!-- Footer -->
-      <footer>
-         Copyright 2023 Aryo Wijoyo at Revo U
-      </footer>
-   </main>
+
+    </main>
+
+    <footer>
+        Copyright 2023 Aryo Wijoyo
+    </footer>
+
+    <script src=" assets/js/index.js"></script>
 </body>
+
 </html>
